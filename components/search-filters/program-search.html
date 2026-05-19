@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/components/search-filters/program-search.css"/>
+</head>
+
+<body>
+    <section class="explore-programs">
+        <div class="intro-content intro-content-center">
+            <h2>Explore Our Programs</h2>
+        </div>
+
+        <dialog id="program-format-modal" aria-hidden="true" aria-modal="true" aria-label="Program format descriptions">
+            <div class="format-modal-container">
+                <button id="close-format-modal-button" aria-hidden="true" aria-label="Close program format options window">
+                <span class="close-button">✕</span>
+                </button>
+                <div>
+                    <h3>On Site</h3>
+                    <p>Programs offered in person at Talbot's La Mirada campus (or other specified location).</p>
+                </div>
+                <div>
+                    <h3>Online</h3>
+                    <p>Programs offered in a remote format.
+                        <br>
+                        <a href="https://www.biola.edu/talbot/academics/online">Learn more</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>Hybrid</h3>
+                    <p>Programs offered with a combination of in-person and online courses.</p>
+                </div>
+                <div>
+                    <h3>Residency</h3>
+                    <p>Programs offered requiring temporary on-site participation.</p>
+                </div>
+            </div>
+        </dialog>
+
+        <div class="programs-content">
+            <aside class="programs-filter-aside">
+                <div class="search-controls">
+                    <div id="search-wrapper">
+                        <input id="search-input" type="text" aria-label="Search degrees">
+                        <button id="filter_submit" aria-label="Search">
+                            <img src="https://assets.biola.edu/4396738754672012438/attachment/5806186998886d394bdc1dbfd41fe2ab/spyglass_white.svg" data-image="913a1iti76zd">
+                        </button>
+                    </div>
+                    <div class="filter-controls_row">
+                        <button class="filter-controls" id="show-filters_btn">Show filters</button>
+                        <button class="filter-controls" id="clear-filters_btn">Clear filters</button>
+                    </div>
+                </div>
+                
+                <div id="filters-module">
+                    <fieldset id="degree_levels">
+                        <legend class="legend_header lead-text">Degree Level</legend>
+                        <div class="button_container">
+                            <button class="filter_btn" data-type="bachelors" aria-label="Filter Bachelor degrees">Bachelor's</button>
+                            <button class="filter_btn" data-type="masters" aria-label="Filter Master's degrees">Master's</button>
+                            <button class="filter_btn" data-type="doctoral" aria-label="Filter Doctoral degrees">Doctoral</button>
+                            <button class="filter_btn" data-type="certificates" aria-label="Filter Certificates">Certificates</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="program-formats">
+                        <div class="legend_header formats_header">
+                            <legend class="lead-text">Format</legend>
+                            <button id="show-format-modal-button" aria-label="Show format descriptions">
+                                <span class="fa fa-question-circle"></span>
+                            </button>
+                        </div>
+                
+                        <div class="button_container">
+                            <button class="formats_btn" data-type="on-site" aria-label="Filter on-site formats">On Site 
+                                <img class="legend-image" src="https://assets.biola.edu/4396738754672012438/attachment/e193708c33e523930464636742deddc3/on-site-1.svg"/>
+                            </button>
+                            <button class="formats_btn" data-type="remote" aria-label="Filter online formats">Online 
+                                <img class="legend-image" src="https://assets.biola.edu/4396738754672012438/attachment/c01ed2390644029a43d9b88cf1d94388/remote-1.svg"/>
+                            </button>
+                            <button class="formats_btn" data-type="hybrid" aria-label="Filter hybrid formats">Hybrid 
+                                <img class="legend-image" src="https://assets.biola.edu/4396738754672012438/attachment/5b292f4b55d7f855ebdfaa200ed4d1bf/hybrid-1.svg"/>
+                            </button>
+                            <button class="formats_btn" data-type="residency" aria-label="Filter residency formats">Residency 
+                                <img class="legend-image" src="https://assets.biola.edu/4396738754672012438/attachment/4117f4b18f10f51f93008e9da1f25253/residency-1.svg"/>
+                            </button>
+                        </div>
+                    </fieldset>
+                </div>
+            </aside>
+
+        <div class="degrees_container" id="degrees_container" tabindex="-1">
+        <h3 class="degree-type" data-type="bachelors">Bachelor's Degrees</h3>
+        <ul>
+        <li class="talbot_degree" data-type="bachelors">
+        <a href="https://www.biola.edu/degrees/u/bible-theology-ministry-ba">B.A. in Bible, Theology and Ministry</a>
+        <span class="icon-row">On-Site</span>
+        </li>
+        <li class="talbot_degree" data-type="bachelors"><a href="https://www.biola.edu/degrees/o/bible-theology-apologetics-bs">B.S. in Bible, Theology and Apologetics</a>
+        <span class="icon-row">Remote</span></li>
+        <li class="talbot_degree" data-type="bachelors">
+        <a href="https://www.biola.edu/degrees/u/biblical-and-theological-studies-minor">Minor in Biblical and Theological Studies</a>
+        <span class="icon-row">On-Site</span></li>
+        <li class="talbot_degree" data-type="bachelors">
+        <a href="https://www.biola.edu/degrees/u/christian-ministries-minor">Minor in Christian Ministries</a>
+        <span class="icon-row">On-Site</span></li>
+        </ul>
+
+        <h3 class="degree-type" data-type="masters">Master's Degrees</h3>
+        <ul>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/master-of-arts">Master of Arts</a>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/bible-exposition-ma">Bible Exposition</a>
+        <span class="icon-row">On-Site, Remote, Hybrid </span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://ktsonline.org/">Biblical and Theological Studies in the Eurasian Context</a>
+        <span class="icon-row">Residency</span>
+        <div class="location">(Kyiv, Ukraine)</div>
+        </li> 
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/new-testament-ma">New Testament</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/old-testament-ma">Old Testament</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/philosophy-ma">Philosophy</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/spiritual-formation-ma">Spiritual Formation</a>
+        <span class="icon-row">On-Site, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <a href="https://www.biola.edu/degrees/g/theology-ma">Theology (Greek and Non-Greek Tracks)</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts">
+        <div class="track-header">[Spanish Track]</div>
+        <a href="https://www.biola.edu/degrees/g/exposicion-biblica-ma">Exposición Bíblica</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/christian-apologetics-ma">Master of Arts - Christian Apologetics</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/science-and-religion-ma">Master of Arts - Science and Religion</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <a href="https://www.biola.edu/degrees/g/master-of-arts">Master of Arts in Christian Ministry and Leadership</a>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <a href="https://www.biola.edu/degrees/g/biblical-and-pastoral-ministry-macml" tabindex="-1">Biblical and Pastoral Ministry</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <a href="https://www.biola.edu/degrees/g/ministry-and-leadership-macml">Ministry and Leadership</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <a href="https://www.biola.edu/degrees/g/pastoral-care-and-counseling-macml" tabindex="-1">Pastoral Care and Counseling</a>
+        <span class="icon-row">On-Site, Hybrid</span></li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <div class="track-header">[Korean Track]</div>
+        <a href="https://www.biola.edu/degrees/g/biblical-and-pastoral-ministry-macml-korean-track">한국어 기독교 사역과 리더십 석사 학위과정 (성경 및 목회 사역)</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <div class="track-header">[Korean Track]</div>
+        <a href="https://www.biola.edu/degrees/g/ministry-and-leadership-ministry-macml-korean-track">한국어 기독교 사역과 리더십 석사 학위과정 (사역 및 리더십)</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Arts in Christian Ministry and Leadership">
+        <div class="track-header">[Spanish Track]</div>
+        <a href="https://www.biola.edu/degrees/g/ministerio-y-liderazgo-cristiano-macml">Ministerio y Liderazgo</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/classical-theology-ma">Master of Arts in Classical Theology</a>
+        <span class="icon-row">On-Site, Remote, Hybrid </span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/intercultural-studies-ma">Master of Arts in Intercultural Studies</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/marriage-and-family-therapy-ma">Master of Arts in Marriage and Family Therapy</a>
+        <span class="icon-row">On-Site</span>
+        </li>
+        <li class="talbot_degree" data-type="masters">
+        <a href="https://www.biola.edu/degrees/g/spiritual-formation-and-soul-care-ma">Master of Arts in Spiritual Formation and Soul Care</a>
+        <span class="icon-row">On-Site</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/master-of-divinity">Master of Divinity</a>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/evangelism-and-discipleship-mdiv">Evangelism and Discipleship</a>
+        <span class="icon-row">On-Site, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/messianic-jewish-studies-mdiv">Messianic Jewish Studies</a>
+        <span class="icon-row">On-Site, Remote</span>
+        <div class="location">(Brooklyn, New York)</div>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/missions-and-intercultural-studies-mdiv">Pastoral and General Ministries</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/pastoral-care-and-counseling-mdiv">Pastoral Care and Counseling</a>
+        <span class="icon-row">On-Site, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <a href="https://www.biola.edu/degrees/g/spiritual-formation-mdiv">Spiritual Formation</a>
+        <span class="icon-row">On-Site, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <div class="track-header">[Korean Track]</div>
+        <a href="https://www.biola.edu/degrees/g/pastoral-and-general-ministries-mdiv-korean-track">한국어 목회학 석사 학위과정</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="masters" data-category="Master of Divinity">
+        <div class="track-header">[Spanish Track]</div>
+        <a href="https://www.biola.edu/degrees/g/ministerios-pastorales-y-generales-mdiv">Ministerios Pastorales y Generales</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        </ul>
+
+        <h3 class="degree-type" data-type="doctoral">Doctoral Degrees</h3>
+        <ul>
+        <li class="talbot_degree" data-type="doctoral">
+        <a href="https://www.biola.edu/degrees/g/doctoral-programs">Doctoral Programs</a>
+        </li>
+        <li class="talbot_degree" data-type="doctoral">
+        <a href="https://www.biola.edu/degrees/g/educational-studies-phd">Ph.D. - Educational Studies</a>
+        <span class="icon-row">Residency</span>
+        </li> 
+        <li class="talbot_degree" data-type="doctoral">
+        <a href="https://www.biola.edu/degrees/g/educational-studies-edd">Ed.D. in Educational Studies</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral">
+        <a href="https://www.biola.edu/degrees/g/intercultural-studies-phd">Ph.D. in Intercultural Studies</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry">Doctor of Ministry</a>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/advanced-biblical-preaching">Advanced Biblical Preaching</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/african-american-ministry">African American Ministry</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/asian-american-ministry">Asian American Ministry</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/christian-leadership">Christian Leadership</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/discipleship">Discipleship for the 21st Century</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/engaging-mind-and-culture">Engaging Mind and Culture</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/growing-and-multiplying-churches">Growing and Multiplying Churches</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/heart-mind-soul">Heart, Mind and Soul</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/ministry-skills">Ministry Skills</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/small-town-churches">Small Town Churches</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry/spiritual-formation-and-soul-care">Spiritual Formation and Soul Care</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        <li class="talbot_degree" data-type="doctoral" data-category="Doctor of Ministry">
+        <div class="track-header">[Korean Track]</div>
+        <a href="https://www.biola.edu/degrees/g/doctor-of-ministry-korean-track">한국어 목회학박사 학위과정</a>
+        <span class="icon-row">Residency</span>
+        </li>
+        </ul>
+
+        <h3 class="degree-type" data-type="certificates">Certificates</h3>
+        <ul>
+        <li class="talbot_degree" data-type="certificates">
+        <a href="https://www.biola.edu/degrees/g/biblical-and-theological-studies-certificate">Certificate in Biblical and Theological Studies</a>
+        <span class="icon-row">On-Site, Remote, Hybrid </span>
+        </li>
+        <li class="talbot_degree" data-type="certificates">
+        <a href="https://www.biola.edu/degrees/g/classical-theology-certificate">Certificate in Classical Theology</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="certificates">
+        <a href="https://www.biola.edu/degrees/g/messianic-jewish-studies-certificate">Certificate in Messianic Jewish Studies</a>
+        <span class="icon-row">On-Site, Remote, Hybrid</span>
+        <div class="location">(Brooklyn, New York)</div>
+        </li> 
+        <li class="talbot_degree" data-type="certificates">
+        <a href="https://www.biola.edu/degrees/g/spiritual-formation-certificate">Certificate in Spiritual Formation</a>
+        <span class="icon-row">On-Site, Hybrid</span>
+        </li>
+        <li class="talbot_degree" data-type="certificates">
+        <div class="track-header">[Korean Track]</div>
+        <a href="https://www.biola.edu/degrees/g/biblical-and-theological-studies-certificate-korean-track">성경 및 신학 연구 수료증 과정</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        <li class="talbot_degree" data-type="certificates">
+        <div class="track-header">[Spanish Track]</div>
+        <a href="https://www.biola.edu/talbot-en-espanol/certificado-en-estudios-biblicos-y-teologicos">Certificado en Estudios Bíblicos y Teológicos</a>
+        <span class="icon-row">Remote</span>
+        </li>
+        </ul>
+        </div>
+        </div>
+    </section>
+</body>
+
+<script src="/components/search-filters/program-search.js"></script>
+</html>
